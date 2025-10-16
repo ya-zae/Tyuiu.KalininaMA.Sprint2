@@ -1,4 +1,5 @@
 ﻿using Tyuiu.KalininaMA.Sprint2.Task3.V12.Lib;
+
 namespace Tyuiu.KalininaMA.Sprint2.Task3.V12.Test
 {
     [TestClass]
@@ -42,4 +43,3 @@ namespace Tyuiu.KalininaMA.Sprint2.Task3.V12.Test
             Assert.AreEqual(wait, res);
         }
     }
-}
