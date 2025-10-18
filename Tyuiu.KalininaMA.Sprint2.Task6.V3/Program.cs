@@ -1,6 +1,7 @@
-﻿using Tyuiu.KalininaMA.Sprint2.Task5.V10.Lib;
+﻿using System;
+using Tyuiu.KalininaMA.Sprint2.Task6.V3.Lib;
 
-namespace Tyuiu.KalininaMA.Sprint2.Task5.V10
+namespace Tyuiu.KalininaMA.Sprint2.Task6.V3
 {
     internal class Program
     {
@@ -15,41 +16,37 @@ namespace Tyuiu.KalininaMA.Sprint2.Task5.V10
             Console.WriteLine("* Тема : Операции сравнения                                               *");
             Console.WriteLine("* Задание #5                                                              *");
             Console.WriteLine("* Вариант #10                                                             *");
-            Console.WriteLine("* Выполнила: Калинина Мария Александровна | Рппб-25-1                      *");
+            Console.WriteLine("* Выполнила: Калинина Мария Александровна | Рппб-25-1                     *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу, которая использует оператор switch вычисляет        *");
-            Console.WriteLine("* требуемое значение и возвращает результат.                              *");
-            Console.WriteLine("* Условие: Дата некоторого дня характеризуется тремя натуральными числами *");
-            Console.WriteLine("* g (год), m (порядковый номер месяца) и n (число).По заданным g, n и m   *");
-            Console.WriteLine("*  определить дату предыдущего дня. Заданный год не является високосным.  *");
+            Console.WriteLine("* Составить программу, которая в зависимости от порядкового номера дня    *");
+            Console.WriteLine("* недели (1, 2, …, 7) выводит на экран его название (понедельник, вторник,*");
+            Console.WriteLine("*  …, воскресенье).                                                       *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
+            Console.Write("Введите порядковый номер дня недели: ");
 
-            Console.Write("Введите Год: ");
-            int year = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Введите Месяц: ");
-            int month = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Введите День: ");
             int day = Convert.ToInt32(Console.ReadLine());
 
-            string res = ds.FindDateOfPreviousDay(year, month, day);
-            Console.WriteLine($"Вы ввели: {day}.{month}.{year}");
+
+            string res;
+            if ((day < 1) || (day > 7))
+            {
+                res = "Введено неверное значение!";
+            }
+            else
+            {
+                res = "Это день недели: " + ds.FindDayName(day);
+            }
+
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-
-            for (int i = 0; i < 6; i++)
-            {
-                Console.WriteLine(res[i]);
-            }
-
-            Console.ReadLine();
+            Console.WriteLine(res);
+            Console.ReadKey();
         }
     }
 }
