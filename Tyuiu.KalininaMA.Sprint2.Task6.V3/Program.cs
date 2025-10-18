@@ -14,8 +14,8 @@ namespace Tyuiu.KalininaMA.Sprint2.Task6.V3
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Cпринт #2                                                               *");
             Console.WriteLine("* Тема : Операции сравнения                                               *");
-            Console.WriteLine("* Задание #5                                                              *");
-            Console.WriteLine("* Вариант #10                                                             *");
+            Console.WriteLine("* Задание #6                                                              *");
+            Console.WriteLine("* Вариант #3                                                              *");
             Console.WriteLine("* Выполнила: Калинина Мария Александровна | Рппб-25-1                     *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
